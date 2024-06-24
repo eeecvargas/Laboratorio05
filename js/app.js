@@ -9,11 +9,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+const resultado = a + b ;
+const mensaje = "The sum of " + a +" and "+ b +" is " + resultado + "."
+return [resultado,  mensaje];
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+ testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -28,10 +30,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 
+const resultado2= a*b;
+const mensaje2 = "The product of " + a + " and " + b + " is " + resultado2 + "."
+return [resultado2, mensaje2];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,6 +53,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) {
 const sumAbc = sum(sum(a, b)[0], c)[0];
 console.log("sumAbc", sumAbc);
@@ -55,6 +62,7 @@ console.log("productAbc", productAbc);
 const summessage = a + " and " + b + " and " + c + " sum to " + sumAbc + ".";
 const productmessage = "The product of " + a + " and " + b + " and " + c + " is " + productAbc + ".";
 return [sumAbc, productAbc, summessage, productmessage];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
